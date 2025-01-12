@@ -1,0 +1,102 @@
+/* Définir le style global de la page */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Utilisation d'un Flexbox pour centrer les éléments */
+body {
+  display: flex;
+  flex-direction: column; /* Affichage des éléments en colonne */
+  justify-content: center; /* Centrer verticalement */
+  align-items: center; /* Centrer horizontalement */
+  height: 100vh; /* Prendre toute la hauteur de la fenêtre */
+  font-family: Arial, sans-serif; /* Définir une police lisible */
+  background-color: #2b2a2a; /* Couleur de fond douce */
+}
+
+/* Conteneur pour le texte et l'input */
+.container {
+  display: flex;
+  flex-direction: column; /* Colonne pour que le texte soit toujours au-dessus de l'input */
+  align-items: center; /* Centrer horizontalement */
+}
+
+/* Texte avec un effet de paillettes plus prononcé */
+p {
+  margin-bottom: 10px; /* Espacement plus petit entre le texte et l'input */
+  font-size: 20px;
+  color: #c0c0c0;
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.5),
+    /* Ombres lumineuses */ 0 0 10px rgba(255, 255, 255, 0.3),
+    0 0 15px rgba(255, 255, 255, 0.1); /* Ajout de paillettes subtiles */
+  animation: scintillement 1.5s infinite; /* Animation pour l'effet de paillettes */
+}
+
+/* Animation des paillettes sur le texte */
+@keyframes scintillement {
+  0% {
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.5),
+      0 0 10px rgba(255, 255, 255, 0.3), 0 0 15px rgba(255, 255, 255, 0.1);
+  }
+  50% {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.6),
+      0 0 15px rgba(255, 255, 255, 0.4), 0 0 20px rgba(255, 255, 255, 0.2); /* Augmentation de la lueur pour simuler les paillettes */
+  }
+  100% {
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.5),
+      0 0 10px rgba(255, 255, 255, 0.3), 0 0 15px rgba(255, 255, 255, 0.1);
+  }
+}
+
+/* Champ de texte avec effet pailleté */
+input {
+  background-color: #2b2a2a;
+  color: #c0c0c0;
+  margin-right: 20px; /* Espacement entre l'input et le bouton */
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #c0c0c0;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(255, 255, 255, 0.3),
+    /* Ombre douce */ 0 0 10px rgba(255, 255, 255, 0.2); /* Ombre plus large pour effet pailleté */
+  transition: box-shadow 0.3s ease; /* Transition douce pour l'ombre */
+}
+
+/* Supprimer l'effet de sélection par défaut (outline) lors du focus */
+input:focus {
+  outline: none; /* Supprimer l'outline par défaut */
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.5),
+    /* Augmenter l'ombre pour indiquer le focus */ 0 0 20px
+      rgba(255, 255, 255, 0.3);
+}
+
+/* Ajouter l'effet pailleté à l'input au survol */
+input:hover {
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.5),
+    /* Ombre plus forte pour effet de paillettes */ 0 0 25px
+      rgba(255, 255, 255, 0.3);
+}
+
+/* Bouton avec effet pailleté */
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #c0c0c0; /* Couleur du bouton */
+  color: black;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 100ms, box-shadow 0.3s ease; /* Animation douce pour le bouton */
+  box-shadow: 0 0 5px rgba(255, 255, 255, 0.3),
+    /* Ombre subtile pour effet pailleté */ 0 0 10px rgba(255, 255, 255, 0.1); /* Ombre lumineuse */
+}
+
+/* Changer la couleur du bouton au survol */
+button:hover {
+  transform: scale(1.1); /* Agrandissement léger du bouton au survol */
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.6),
+    /* Ombre plus intense pour effet de paillettes */ 0 0 25px
+      rgba(255, 255, 255, 0.3);
+}
