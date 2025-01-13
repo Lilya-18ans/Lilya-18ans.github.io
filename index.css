@@ -29,7 +29,10 @@ body {
     0 0 10px rgba(255, 255, 255, 0.3), 0 0 15px rgba(255, 255, 255, 0.1);
   animation: scintillement 1.5s infinite;
 }
-
+#erreur {
+  font-size: 20px;
+  margin-top: 20px;
+}
 p {
   margin-bottom: 10px; /* Espacement plus petit entre le texte et l'input */
   font-size: 20px;
