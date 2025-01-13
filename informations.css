@@ -22,8 +22,9 @@ body {
 
 /* Titre principal */
 .main-title {
+  font-weight: 45;
   font-family: "Playwrite AU SA", serif;
-  font-size: 35px;
+  font-size: 40px;
   color: #c0c0c0;
   margin-bottom: 30px;
   text-align: center;
@@ -49,15 +50,14 @@ body {
 h2 {
   font-size: 24px;
   margin-bottom: 10px;
-  /* font-weight: bold; */
   color: #c0c0c0;
-  text-shadow: 0 0 5px rgba(255, 255, 255, 0.5),
-    0 0 2px rgba(255, 255, 255, 0.3), 0 0 15px rgba(255, 255, 255, 0.1);
 }
 
 p {
   font-size: 18px;
   margin-bottom: 15px;
+  font-weight: normal;
+  font-family: "Ubuntu", sans-serif;
 }
 
 /* Style pour le bouton de retour */
