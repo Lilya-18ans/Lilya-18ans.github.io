@@ -53,38 +53,17 @@ h2 {
   color: #c0c0c0;
   text-align: center;
   margin-bottom: 30px;
-  text-shadow: 0 0 5px rgba(255, 255, 255, 0.5),
-    0 0 10px rgba(255, 255, 255, 0.3), 0 0 15px rgba(255, 255, 255, 0.1);
+  /* text-shadow: 0 0 5px rgba(255, 255, 255, 0.5),
+    0 0 10px rgba(255, 255, 255, 0.3), 0 0 15px rgba(255, 255, 255, 0.1); */
 }
 
 .sub-title .info-link {
   color: #c0c0c0;
-
   font-size: 20px;
   margin-left: 20px;
   font-weight: bold;
-  text-shadow: 0 0 5px rgba(255, 255, 255, 0.5),
-    0 0 10px rgba(255, 255, 255, 0.3), 0 0 15px rgba(255, 255, 255, 0.1);
-}
-
-.sub-title .info-link:hover {
-  text-decoration: underline;
-}
-
-/* Animation des paillettes sur le texte */
-@keyframes scintillement {
-  0% {
-    text-shadow: 0 0 5px rgba(255, 255, 255, 0.5),
-      0 0 10px rgba(255, 255, 255, 0.3), 0 0 15px rgba(255, 255, 255, 0.1);
-  }
-  50% {
-    text-shadow: 0 0 10px rgba(255, 255, 255, 0.6),
-      0 0 15px rgba(255, 255, 255, 0.4), 0 0 20px rgba(255, 255, 255, 0.2); /* Augmentation de la lueur pour simuler les paillettes */
-  }
-  100% {
-    text-shadow: 0 0 5px rgba(255, 255, 255, 0.5),
-      0 0 10px rgba(255, 255, 255, 0.3), 0 0 15px rgba(255, 255, 255, 0.1);
-  }
+  /* text-shadow: 0 0 5px rgba(255, 255, 255, 0.5),
+    0 0 10px rgba(255, 255, 255, 0.3), 0 0 15px rgba(255, 255, 255, 0.1); */
 }
 
 /* Conteneur du formulaire */
@@ -104,8 +83,8 @@ label {
   margin-bottom: 10px;
   display: block;
   font-weight: bold;
-  text-shadow: 0 0 5px rgba(255, 255, 255, 0.5),
-    0 0 10px rgba(255, 255, 255, 0.3), 0 0 15px rgba(255, 255, 255, 0.1);
+  /* text-shadow: 0 0 5px rgba(255, 255, 255, 0.5),
+    0 0 10px rgba(255, 255, 255, 0.3), 0 0 15px rgba(255, 255, 255, 0.1); */
 }
 
 input,
