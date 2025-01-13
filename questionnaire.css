@@ -53,8 +53,6 @@ h2 {
   color: #c0c0c0;
   text-align: center;
   margin-bottom: 30px;
-  /* text-shadow: 0 0 5px rgba(255, 255, 255, 0.5),
-    0 0 10px rgba(255, 255, 255, 0.3), 0 0 15px rgba(255, 255, 255, 0.1); */
 }
 
 .sub-title .info-link {
@@ -62,8 +60,12 @@ h2 {
   font-size: 20px;
   margin-left: 20px;
   font-weight: bold;
-  /* text-shadow: 0 0 5px rgba(255, 255, 255, 0.5),
-    0 0 10px rgba(255, 255, 255, 0.3), 0 0 15px rgba(255, 255, 255, 0.1); */
+  transition: transform 10ms;
+}
+
+.sub-title .info-link :hover {
+  transform: scale(1.1);
+  color: aqua;
 }
 
 /* Conteneur du formulaire */
