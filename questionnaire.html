@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="questionnaire.css" />
+    <title>Questionnaire</title>
+  </head>
+  <body>
+    <div class="container">
+      <h2>Questionnaire</h2>
+      <form action="#" method="POST">
+        <label for="prenom">Prénom</label>
+        <input type="text" id="prenom" name="prenom" required />
+
+        <label for="nom">Nom</label>
+        <input type="text" id="nom" name="nom" required />
+
+        <label for="presence">Serez-vous là ?</label>
+        <input type="text" id="presence" name="presence" required />
+
+        <label for="musique">Musique à suggérer au DJ ? (nom ou lien) </label>
+        <textarea id="musique" name="musique"></textarea>
+
+        <button type="submit">Soumettre</button>
+      </form>
+    </div>
+  </body>
+</html>
