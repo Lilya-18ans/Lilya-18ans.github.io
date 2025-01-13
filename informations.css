@@ -23,7 +23,7 @@ body {
 /* Titre principal */
 .main-title {
   font-family: "Playwrite AU SA", serif;
-  font-size: 48px;
+  font-size: 35px;
   color: #c0c0c0;
   margin-bottom: 30px;
   text-align: center;
@@ -84,12 +84,12 @@ p {
 
 /* Informations de contact en bas à gauche */
 .contact-info {
-  position: absolute;
-  bottom: 20px;
-  left: 20px;
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 15px;
+  position: relative;
   font-size: 16px;
   color: #c0c0c0;
-  text-align: left;
   font-family: "Ubuntu", sans-serif;
 }
 
