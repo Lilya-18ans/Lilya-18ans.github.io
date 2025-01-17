@@ -25,12 +25,15 @@ const liste = [
   "thibaut",
   "pia",
   "sandra",
-  "guillhem",
+  "guilhem",
   "laetitia",
   "guillaume",
   "helene",
   "valerie",
   "christophe",
+  "charlène",
+  "william",
+  "jade",
 ];
 
 function normalizeString(input) {
