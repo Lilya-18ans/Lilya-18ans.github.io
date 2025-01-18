@@ -10,6 +10,8 @@ const liste = [
   "nathan",
   "antoine",
   "titouan",
+  "bruce",
+  "emilie",
   "ethan",
   "clara",
   "luce",
