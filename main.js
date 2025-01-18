@@ -40,14 +40,13 @@ function normalizeString(input) {
   return input
     .normalize("NFD")
     .replace(/[\u0300-\u036f]/g, "")
-    .replace(/[:-_.~]/g, "")
     .toLowerCase();
 }
 
 document.querySelector("#recherche").addEventListener("click", function () {
   const input = document.querySelector("#input-r");
   const prenomNormalized = normalizeString(input.value);
-
+  console.log(prenomNormalized);
   if (
     liste.map((prenom) => normalizeString(prenom)).includes(prenomNormalized)
   ) {
