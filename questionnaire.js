@@ -6,9 +6,6 @@ const prenom = localStorage.getItem("prenom");
 if (prenom) {
   span.innerHTML = prenom;
   console.log(prenom);
-} else {
-  // Si le prénom n'est pas trouvé, tu peux gérer cette situation (par exemple, rediriger l'utilisateur)
-  window.location.href = "index.html"; // Rediriger vers la page d'accueil si le prénom est introuvable
 }
 
 document.querySelector("form").addEventListener("submit", function (event) {
