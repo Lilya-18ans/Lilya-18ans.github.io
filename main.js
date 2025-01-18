@@ -3,7 +3,6 @@ const liste = [
   "solal",
   "noélie",
   "ilian",
-  "noah",
   "amaya",
   "lola",
   "alyssa",
