@@ -1,9 +1,15 @@
 const span = document.querySelector("#prenom");
 
-const url = window.location.search;
-const parametre = new URLSearchParams(url);
-span.innerHTML = parametre.get("prenom");
-console.log(parametre.get("prenom"));
+// Récupérer le prénom depuis le localStorage
+const prenom = localStorage.getItem("prenom");
+
+if (prenom) {
+  span.innerHTML = prenom;
+  console.log(prenom);
+} else {
+  // Si le prénom n'est pas trouvé, tu peux gérer cette situation (par exemple, rediriger l'utilisateur)
+  window.location.href = "index.html"; // Rediriger vers la page d'accueil si le prénom est introuvable
+}
 
 document.querySelector("form").addEventListener("submit", function (event) {
   event.preventDefault(); // Empêche le rechargement de la page
@@ -12,11 +18,13 @@ document.querySelector("form").addEventListener("submit", function (event) {
   const nom = document.getElementById("nom").value;
   const presence = document.getElementById("presence").value;
   const musique = document.getElementById("musique").value;
-  const prenom = parametre.get("prenom");
 
-  // Créer un message pour Discord
+  // Utiliser le prénom récupéré depuis localStorage
+  const roleMention = "<@&1328439837413478484>"; // Remplacez par l'ID du rôle
+
+  // Créer un message pour Discord avec la mention du rôle
   const message = {
-    content: `Nouvelle soumission du questionnaire pour **${prenom}**:\n\n**Nom**: ${nom}\n**Présence**: ${presence}\n**Musique suggérée**: ${
+    content: `${roleMention}\n\nNouvelle réponse pour : **${prenom}**  ${nom}\n\n**Présence**: ${presence}\n\n**Musique suggérée**: ${
       musique || "aucune"
     }`,
   };

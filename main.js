@@ -43,18 +43,37 @@ function normalizeString(input) {
     .replace(/[:-_.~]/g, "")
     .toLowerCase();
 }
+
 document.querySelector("#recherche").addEventListener("click", function () {
   const input = document.querySelector("#input-r");
+  const prenomNormalized = normalizeString(input.value);
+
   if (
-    liste
-      .map((prenom) => normalizeString(prenom))
-      .includes(normalizeString(input.value))
+    liste.map((prenom) => normalizeString(prenom)).includes(prenomNormalized)
   ) {
     console.log("le prenom existe");
-    window.location.href = "questionnaire.html?prenom=" + input.value;
+
+    // Stocker le prénom dans localStorage
+    localStorage.setItem("prenom", input.value);
+
+    // Rediriger vers la page du questionnaire
+    window.location.href = "questionnaire.html";
   } else {
     const erreur = document.querySelector("#erreur");
     erreur.innerHTML =
       "Le nom est mal écrit ou n'existe pas. Contactez le 06 95 92 48 31 si l'erreur persiste ";
   }
 });
+// Récupérer le prénom depuis le localStorage
+const prenom = localStorage.getItem("prenom");
+
+// Afficher le prénom dans un élément de la page (par exemple dans un span)
+const span = document.querySelector("#prenom");
+if (prenom) {
+  span.innerHTML = prenom;
+} else {
+  // Si le prénom n'est pas trouvé, tu peux gérer cette situation (par exemple, rediriger l'utilisateur)
+  window.location.href = "index.html"; // Rediriger vers la page d'accueil si le prénom est introuvable
+}
+
+console.log(prenom); // Affiche le prénom dans la console pour vérification
