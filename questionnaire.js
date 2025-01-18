@@ -39,7 +39,7 @@ document.querySelector("form").addEventListener("submit", function (event) {
   )
     .then((response) => {
       if (response.ok) {
-        alert("Votre soumission a été envoyée avec succès !");
+        alert("Votre réponse a été envoyée à lilya avec succès !");
       } else {
         alert("Erreur lors de l'envoi de la soumission.");
       }
